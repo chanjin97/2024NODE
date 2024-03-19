@@ -7,13 +7,19 @@ const UserSchema = mongoose.Schema(
       required: true,
     },
     name: {
-      first: { type: String, required: true },
-      last: { type: String, required: true },
+      first: {
+        type: String,
+        required: true,
+      },
+      last: {
+        type: String,
+        required: true,
+      },
     },
     age: Number,
     email: String,
   },
-  { timestaps: true }
+  { timestamps: true }
 );
 
 const User = mongoose.model("user", UserSchema);
